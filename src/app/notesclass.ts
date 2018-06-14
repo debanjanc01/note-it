@@ -5,7 +5,7 @@ export class Notesclass {
     text:string;
     date:string;
 
-    constructor(id,title,text,date)
+    constructor(id:number,title:string,text:string,date:string)
     {
         this.id=id;
         this.title=title;

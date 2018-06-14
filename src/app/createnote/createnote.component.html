@@ -1,3 +1,8 @@
-<p>
-  createnote works!
-</p>
+
+<form>
+  <h4>Title</h4>
+  <input type="text" #titleInput>
+  <h4>Text</h4>
+  <textarea name="" #textInput cols="30" rows="10"></textarea>
+  <input type="button" value="Submit" (click)="saveText(titleInput.value,textInput.value)">
+</form>
