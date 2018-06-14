@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,700');
+
+
+body{
+  background:#F0F7F4;
+  height:100%;
+  padding-left: 1em;
+  padding-right: 1em;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Arial';
+  overflow-wrap: break-word;
+  
+}
+a{
+  text-decoration: none;
+}
+
+header{
+background: #A2E3C4;
+padding:1em;
+margin-bottom: 2em;
+text-align: center;
+letter-spacing: 0.5em;
+}
+
+.container{
+  margin:0em 1em;
+  padding:1em 1em;
+  margin-bottom: 2em;
+  background: #7E8D85;
+}
+.col{
+  background:#B3BFB8;
+  margin:1em;
+  padding:1em;
+}
+.col:hover{
+  background: #90ceb0;
+}
+.newbtn{
+  background: #aae3a2;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.newbtn:hover{
+  background: #85b27e;
+}
+.title{
+  text-align: center;
+
+}
+.box{
+  margin:0.4em 0;
+
+}

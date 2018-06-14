@@ -1,7 +1,29 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AllnotesComponent } from './allnotes/allnotes.component';
+import { ViewnoteComponent } from './viewnote/viewnote.component';
+import { CreatenoteComponent } from './createnote/createnote.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path:'',
+    component: AllnotesComponent
+  },
+  {
+    path:'create',
+    component: CreatenoteComponent
+  },
+  {
+    path:'view',
+    component: ViewnoteComponent
+  },
+  {
+    path:'**',
+    component: NotfoundComponent
+  }
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
