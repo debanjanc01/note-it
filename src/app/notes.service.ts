@@ -28,6 +28,18 @@ export class NotesService {
     this.note.push(note);
     console.log(this.note);
     this.setLocalStorage(this.note);
-
   }
+
+  getParticularNote(id:number): Notesclass
+  {
+    let newnote;
+    let notes=this.getNotes();
+    notes.forEach(note => {
+      if(note.id==id)
+        newnote= note;
+      
+    });
+    return newnote;
+  }
+
 }

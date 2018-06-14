@@ -5,7 +5,7 @@
     </div>
   </a>
 
-  <a *ngFor="let note of notes" routerLink="view"> 
+  <a *ngFor="let note of notes" (click)="viewNote(note.id)"> 
       <div class="col">
           <div class="title box">{{note.title}}</div>
           <div class="time box">420</div>

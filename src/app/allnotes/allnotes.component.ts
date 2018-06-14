@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NotesService } from '../notes.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-allnotes',
@@ -9,12 +10,16 @@ import { NotesService } from '../notes.service';
 export class AllnotesComponent implements OnInit {
 
   notes=[];
-  constructor(private _notesService: NotesService) { }
+  constructor(private _notesService: NotesService, private router: Router) { }
 
   ngOnInit() {
     this.notes=this._notesService.getNotes();
-    localStorage.setItem("1","bat");
-    
+  }
+
+  viewNote(id)
+  {
+    console.log("inside here "+ id);
+    this.router.navigate(['/view',id]);    
   }
 
 

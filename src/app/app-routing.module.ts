@@ -15,7 +15,7 @@ const routes: Routes = [
     component: CreatenoteComponent
   },
   {
-    path:'view',
+    path:'view/:id',
     component: ViewnoteComponent
   },
   {
