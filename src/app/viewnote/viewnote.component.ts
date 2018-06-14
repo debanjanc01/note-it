@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NotesService } from '../notes.service';
 import { Notesclass } from '../notesclass';
 
@@ -10,14 +10,24 @@ import { Notesclass } from '../notesclass';
 })
 export class ViewnoteComponent implements OnInit {
   note: Notesclass;
-  constructor(private noteService:NotesService, private route: ActivatedRoute) { }
+  display:boolean;
+  constructor(private noteService:NotesService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     let id=parseInt(this.route.snapshot.paramMap.get('id'));
     this.note=this.noteService.getParticularNote(id);
-    console.log("id in viewnote "+id);
-    console.log(this.note);
+    if(this.note==null){
+      this.router.navigate(['error']);
+      this.display=false;
+    } else{
+      this.display=true;
+    }   
+
+
 }
 
+delete():void{
+  this.noteService.deleteNote(this.note);
+}
 
 }

@@ -1,0 +1,19 @@
+.cont{
+    background: #7E8D85;
+    padding:1.4em;
+}
+
+.bar{
+    background: #B3BFB8;
+    padding:0.7em 0.4em;
+    margin:1em;
+    text-align:center;
+}
+
+.del{
+    background: #ffb0b0;
+}
+.del:hover {
+    background: #fd5050
+
+}

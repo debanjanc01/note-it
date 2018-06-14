@@ -1,21 +1,29 @@
 import { Injectable } from '@angular/core';
 import {Notesclass} from '../app/notesclass';
+import { forEach } from '@angular/router/src/utils/collection';
 @Injectable({
   providedIn: 'root'
 })
 export class NotesService {
-  private note : Notesclass[];
   private nextId: number;
   constructor() { 
-    let note1=new Notesclass(1,"first","random text for first note","today");
-    let note2=new Notesclass(2,"second","random text for first note","today");
-    this.note=[note1,note2];
-    this.nextId=3;
-    localStorage.setItem("notes",JSON.stringify(this.note));
+   this.setID();
+  }
+
+  private setID():void
+  {
+    let notes=this.getNotes();
+    if(notes.length==0){
+      this.nextId=1;
+    }
+    else{
+      let id=notes[notes.length-1].id;
+      this.nextId=id+1;
+    }
   }
 
   getNotes() : Notesclass[]{
-    return JSON.parse(localStorage.getItem("notes"));
+    return (JSON.parse(localStorage.getItem("notes"))==null?[]:JSON.parse(localStorage.getItem("notes")));
   }
 
   private setLocalStorage(note: Notesclass[])
@@ -23,11 +31,23 @@ export class NotesService {
     localStorage.setItem("notes",JSON.stringify(note));
   }
 
-  saveNotes(title:string,text:string): void{
-    let note=new Notesclass(this.nextId,title,text,"bla");
-    this.note.push(note);
-    console.log(this.note);
-    this.setLocalStorage(this.note);
+  saveNotes(title:string,text:string,date:string): void{
+    console.log(date);
+    let note=new Notesclass(this.nextId,title,text,date);
+    let localnotes=this.getNotes();
+    localnotes.push(note);
+    this.nextId++;
+    this.setLocalStorage(localnotes);
+  }
+
+  deleteNote(note:Notesclass):void{
+    let notes=this.getNotes();
+    let newnotes=[];
+    notes.forEach(n => {
+      if(n.id!==note.id)
+        newnotes.push(n);
+    });
+    this.setLocalStorage(newnotes);
   }
 
   getParticularNote(id:number): Notesclass

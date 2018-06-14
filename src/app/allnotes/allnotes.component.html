@@ -1,16 +1,16 @@
 <div class="container">
   <a routerLink="create">
     <div class="col newbtn" >
-      clickme
+      + Create New
     </div>
   </a>
 
   <a *ngFor="let note of notes" (click)="viewNote(note.id)"> 
       <div class="col">
           <div class="title box">{{note.title}}</div>
-          <div class="time box">420</div>
+          <div class="time box">{{note.date}}</div>
           <div class="content box">{{note.text}}</div>
-        </div>
+      </div>
   </a>
   
 </div>

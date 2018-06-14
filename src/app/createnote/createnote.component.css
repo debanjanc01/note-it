@@ -1,0 +1,36 @@
+.bar{
+    background: #B3BFB8;
+    padding:0.4em;
+    text-align:center;
+
+}
+
+.inputarea {
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 0.5em;
+    background-color: #f7f7f7;
+    resize: none;
+}
+
+input[type=button]{
+    margin:2em;
+    height:4em;
+    width:27%;
+    display: inline-block;
+    text-align: center;
+    font-size:1em;
+    font-weight: bold;
+    background: #afcebb;
+    border:none;
+}
+input[type=button]:hover{
+    background: #B3BFB8;
+    cursor:pointer;
+}
+
+.right{
+    align-self: right;
+}

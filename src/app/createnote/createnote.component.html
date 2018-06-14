@@ -1,8 +1,10 @@
 
 <form>
-  <h4>Title</h4>
-  <input type="text" #titleInput>
-  <h4>Text</h4>
-  <textarea name="" #textInput cols="30" rows="10"></textarea>
-  <input type="button" value="Submit" (click)="saveText(titleInput.value,textInput.value)">
+  <h3 class="bar">Title</h3>
+  <input class="inputarea"type="text" #titleInput>
+  <h3 class="bar">Text</h3>
+  <textarea class="inputarea" #textInput cols="30" rows="10"></textarea>
+  <input type="button" value="Back" routerLink="">
+  <input class="right" type="button" value="Save" (click)="saveText(titleInput.value,textInput.value)">
+  
 </form>

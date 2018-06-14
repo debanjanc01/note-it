@@ -14,9 +14,8 @@ export class CreatenoteComponent implements OnInit {
   }
 
   saveText(title,text){
-    console.log(title);
-    console.log(text);
-    this.notesService.saveNotes(title,text);
+    let date=new Date().toLocaleString();
+    this.notesService.saveNotes(title,text,date);
 
   }
 }

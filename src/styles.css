@@ -9,7 +9,7 @@ body{
   box-sizing: border-box;
   font-family: 'Roboto', 'Arial';
   overflow-wrap: break-word;
-  
+  color:#111111;
 }
 a{
   text-decoration: none;
@@ -53,4 +53,21 @@ letter-spacing: 0.5em;
 .box{
   margin:0.4em 0;
 
+}
+
+input[type=button]{
+  margin:2em;
+  height:4em;
+  width:27%;
+  display: inline-block;
+  text-align: center;
+  font-size:1em;
+  font-weight: bold;
+  background: #afcebb;
+  border:none;
+}
+
+input[type=button]:hover{
+  background: #B3BFB8;
+  cursor:pointer;
 }
