@@ -28,6 +28,7 @@ export class ViewnoteComponent implements OnInit {
 
 delete():void{
   this.noteService.deleteNote(this.note);
+  this.router.navigate([''])
 }
 
 }

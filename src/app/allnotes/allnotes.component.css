@@ -9,8 +9,45 @@ a:hover{
     background: #a5afa9;
     padding:0.3em 0em;
     font-size: 1.2em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.title:hover{
+.col:hover .title{
     background: #7db399;
+}
+.content{
+    border-top:2px #7E8D85 solid;
+    padding-top:4px;
+    line-height: 1em;
+    max-height: 2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.time{
+    font-size: 0.9em;
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 740px) and (max-width: 991px){
+    .container
+    {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+    
+    
+}
+
+@media only screen and (min-width: 992px){
+    .container
+    {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-content: stretch;
+    }
+
+    
 }

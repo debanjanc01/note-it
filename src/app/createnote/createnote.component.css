@@ -13,22 +13,13 @@
     border-radius: 0.5em;
     background-color: #f7f7f7;
     resize: none;
+    font-size: 18px; 
 }
 
-input[type=button]{
-    margin:2em;
-    height:4em;
-    width:27%;
-    display: inline-block;
-    text-align: center;
-    font-size:1em;
-    font-weight: bold;
-    background: #afcebb;
-    border:none;
-}
-input[type=button]:hover{
-    background: #B3BFB8;
-    cursor:pointer;
+
+.err{
+    background:#ffb0b0;
+    padding:0.5em;
 }
 
 .right{

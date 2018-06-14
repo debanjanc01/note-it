@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,700');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
 
 body{
@@ -7,7 +8,7 @@ body{
   padding-left: 1em;
   padding-right: 1em;
   box-sizing: border-box;
-  font-family: 'Roboto', 'Arial';
+  font-family: 'Ubuntu','Roboto', 'Arial', sans-serif;
   overflow-wrap: break-word;
   color:#111111;
 }
@@ -20,7 +21,8 @@ background: #A2E3C4;
 padding:1em;
 margin-bottom: 2em;
 text-align: center;
-letter-spacing: 0.5em;
+
+
 }
 
 .container{
@@ -30,6 +32,7 @@ letter-spacing: 0.5em;
   background: #7E8D85;
 }
 .col{
+
   background:#B3BFB8;
   margin:1em;
   padding:1em;
@@ -40,11 +43,11 @@ letter-spacing: 0.5em;
 .newbtn{
   background: #aae3a2;
   text-align: center;
-  font-size: 1.5em;
+  font-size:1.1em;
 }
 
 .newbtn:hover{
-  background: #85b27e;
+  background: #8efd7d;
 }
 .title{
   text-align: center;
@@ -54,12 +57,16 @@ letter-spacing: 0.5em;
   margin:0.4em 0;
 
 }
+.btnwrap{
+  text-align: center;
+  
+}
 
 input[type=button]{
-  margin:2em;
+  display:inline-block;
+  margin:2em 0.8em;
   height:4em;
-  width:27%;
-  display: inline-block;
+  width:25%;
   text-align: center;
   font-size:1em;
   font-weight: bold;
@@ -70,4 +77,11 @@ input[type=button]{
 input[type=button]:hover{
   background: #B3BFB8;
   cursor:pointer;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color:#111111;
+}
+a:hover{
+  cursor: pointer;
 }

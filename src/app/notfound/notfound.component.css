@@ -1,0 +1,15 @@
+h1{
+    text-align:center;
+}
+
+div{
+    background: #7cb5ff;
+    text-align:center;
+    padding:1.5em;
+    font-size:20px;
+    margin:0em 1em;
+}
+
+div:hover{
+    background: #75a8eb;
+}
