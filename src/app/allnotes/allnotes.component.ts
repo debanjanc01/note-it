@@ -18,7 +18,6 @@ export class AllnotesComponent implements OnInit {
 
   viewNote(id)
   {
-    console.log("inside here "+ id);
     this.router.navigate(['/view',id]);    
   }
 

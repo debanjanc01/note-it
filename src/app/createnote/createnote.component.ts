@@ -35,7 +35,7 @@ export class CreatenoteComponent implements OnInit {
     {
       let date=new Date().toLocaleString();
       this.notesService.saveNotes(title,text,date);
-      this.router.navigate[''];
+      this.router.navigate(['']);
     }
   }
 }
