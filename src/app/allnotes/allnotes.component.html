@@ -1,16 +1,18 @@
-<div class="container">
-  <a routerLink="create">
-    <div class="col newbtn" >
-      + Create New
-    </div>
-  </a>
+<div class="wrap">
+    <div class="container">
+      <a routerLink="create">
+        <div class="col newbtn" >
+          + Create New
+        </div>
+      </a>
 
-  <a *ngFor="let note of notes" (click)="viewNote(note.id)"> 
-      <div class="col">
-          <div class="title box">{{note.title}}</div>
-          <div class="time box">{{note.date}}</div>
-          <div class="content box">{{note.text}}</div>
-      </div>
-  </a>
-  
+      <a *ngFor="let note of notes" (click)="viewNote(note.id)"> 
+          <div class="col">
+              <div class="title box">{{note.title}}</div>
+              <div class="time box">{{note.date}}</div>
+              <div class="content box">{{note.text}}</div>
+          </div>
+      </a>
+      
+    </div>
 </div>

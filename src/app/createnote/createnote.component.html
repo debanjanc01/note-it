@@ -6,7 +6,7 @@
   <h3 class="bar">Text</h3>
   <textarea class="inputarea" #textInput cols="30" rows="10"></textarea>
   <div *ngIf="emptyText" class="err">Cannot be blank!</div>
-  <div class="btnwrap">
+  <div class="wrap">
     <input type="button" value="Back" routerLink="">
     <input type="button" value="Save" (click)="saveText(titleInput.value,textInput.value)">
   </div>

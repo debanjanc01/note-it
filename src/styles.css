@@ -57,13 +57,13 @@ text-align: center;
   margin:0.4em 0;
 
 }
-.btnwrap{
+.wrap{
   text-align: center;
   
 }
 
 input[type=button]{
-  display:inline-block;
+  
   margin:2em 0.8em;
   height:4em;
   width:25%;

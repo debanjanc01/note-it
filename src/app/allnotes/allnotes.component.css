@@ -1,9 +1,4 @@
-a:link, a:visited, a:hover, a:active {
-    color:#111111;
-}
-a:hover{
-    cursor: pointer;
-}
+
 
 .title{
     background: #a5afa9;
@@ -30,24 +25,3 @@ a:hover{
     text-align: center;
 }
 
-
-@media only screen and (min-width: 740px) and (max-width: 991px){
-    .container
-    {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-}
-    
-    
-}
-
-@media only screen and (min-width: 992px){
-    .container
-    {
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    place-content: stretch;
-    }
-
-    
-}
