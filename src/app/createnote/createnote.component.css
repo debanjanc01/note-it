@@ -1,3 +1,8 @@
+form{
+    max-width: 600px;
+    margin:auto;
+}
+
 .bar{
     background: #B3BFB8;
     padding:0.4em;

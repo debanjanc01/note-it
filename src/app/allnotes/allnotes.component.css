@@ -1,4 +1,7 @@
-
+.container{
+    margin:auto;
+    
+}
 
 .title{
     background: #a5afa9;
@@ -15,9 +18,11 @@
 .content{
     border-top:2px #7E8D85 solid;
     padding-top:4px;
+    font-size:1em;
     line-height: 1em;
     max-height: 2em;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
 }
 .time{
@@ -25,3 +30,18 @@
     text-align: center;
 }
 
+
+
+@media (min-width:600px){
+    .container{
+        max-width: 80%;
+        margin:auto;
+        display:grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+        align-items:center;
+    }
+
+    .col{
+        max-width: 250px;
+    }
+}

@@ -1,13 +1,14 @@
-
-<form>
-  <h3 class="bar">Title</h3>
-  <input class="inputarea"type="text" #titleInput>
-  <div *ngIf="emptyTitle" class="err">Cannot be blank!</div>
-  <h3 class="bar">Text</h3>
-  <textarea class="inputarea" #textInput cols="30" rows="10"></textarea>
-  <div *ngIf="emptyText" class="err">Cannot be blank!</div>
-  <div class="wrap">
-    <input type="button" value="Back" routerLink="">
-    <input type="button" value="Save" (click)="saveText(titleInput.value,textInput.value)">
-  </div>
-</form>
+<div class="middle">
+  <form>
+    <h3 class="bar">Title</h3>
+    <input class="inputarea"type="text" #titleInput placeholder="What is the title?">
+    <div *ngIf="emptyTitle" class="err">Cannot be blank!</div>
+    <h3 class="bar">Text</h3>
+    <textarea class="inputarea" #textInput cols="30" rows="10" placeholder="Put your note in here."></textarea>
+    <div *ngIf="emptyText" class="err">Cannot be blank!</div>
+    <div class="wrap">
+      <input type="button" value="Back" routerLink="">
+      <input type="button" value="Save" (click)="saveText(titleInput.value,textInput.value)">
+    </div>
+  </form>
+</div>

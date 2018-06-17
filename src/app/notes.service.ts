@@ -32,7 +32,6 @@ export class NotesService {
   }
 
   saveNotes(title:string,text:string,date:string): void{
-    console.log(date);
     let note=new Notesclass(this.nextId,title,text,date);
     let localnotes=this.getNotes();
     localnotes.push(note);
@@ -42,11 +41,7 @@ export class NotesService {
 
   deleteNote(note:Notesclass):void{
     let notes=this.getNotes();
-    let newnotes=[];
-    notes.forEach(n => {
-      if(n.id!==note.id)
-        newnotes.push(n);
-    });
+    let newnotes=notes.filter(n=>n.id!==note.id);
     this.setLocalStorage(newnotes);
   }
 
